@@ -1,0 +1,495 @@
+/*Responsive 0~768*/
+@media only screen and (max-device-width:768px) , only screen and (max-width:768px){
+  /*search bar block*/
+  .search_box{
+    font-size: 1.1rem;
+    border : 1px solid black;
+    width:90%;
+    padding:10px;
+    margin: 30px auto 30px;
+  }
+  .search_bar{
+    width:440px;
+    margin: 0px auto;
+    width :90vw;
+  }
+  .search_bar input{
+    display: block;
+    height:35px;
+    margin: 10px auto;
+  }
+  .search_bar [type=text]{
+    width: 75vw
+  }
+  /*criteria block*/
+  .criteria{
+    width:90vw;
+    margin:0px auto;
+
+  }
+  .criteria select{
+    margin: 10px 0px;
+    width:50vw;
+    height:35px;
+  }
+  .criteria label{
+    display: inline-block;
+    margin: 10px 0px;
+    width:100px;
+  }
+  /*control buttons block*/
+  .control_buttons{
+    width:80vw;
+    margin:0px auto;
+  }
+  .control_buttons button{
+    display: inline-block;
+    width:25vw;
+    height: 70px;
+  }
+  /*results block*/
+  .results{
+    box-sizing: content-box;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    width:85vw;
+    margin:20px auto ;
+    overflow: scroll;
+    max-height: 80vh;
+  }
+  /*############################3*/
+  /*update_customer*/
+  .update_customer{
+    /*border*/
+  }
+  .update_customer input , .update_customer label , .update_customer textarea{
+    display: block;
+    margin: 10px;
+    width:80%;
+  }
+  .update_customer input , .update_customer textarea{
+    height: 40px;
+  }
+  .update_customer textarea{
+    height:200px;
+    resize: none;
+  }
+  .update_customer button{
+    width:150px;
+    height:70px;
+    display: block;
+    margin: 0px auto;
+  }
+
+  /*update_project*/
+  .update_project{
+    /*border*/
+  }
+  .update_project label, .update_project input , .update_project textarea  ,.update_project select {
+    display: block;
+    margin: 10px;
+    width:80%;
+  }
+  .update_project input , .update_project textarea  ,.update_project select {
+  height: 40px;
+  }
+  .update_project textarea{
+    height: 200px;
+    resize: none;
+  }
+  .update_project button{
+    width:150px;
+    height:70px;
+    display: block;
+    margin: 20px auto;
+  }
+
+  /* update_transaction*/
+  .update_transaction{
+    /*border*/
+  }
+  .update_transaction label , .update_transaction input, .update_transaction textarea{
+    display: block;
+    margin: 10px;
+    width:80%;
+  }
+  .update_transaction input, .update_transaction textarea{
+    height: 40px;
+  }
+
+  .update_transaction textarea{
+    resize: none;
+    height: 200px;
+  }
+
+  .update_transaction button{
+    width:150px;
+    height:70px;
+    display: block;
+    margin: 20px auto;
+  }
+}
+
+/*Responsive 769~ 1200 */
+@media only screen and (min-width:769px) and (max-width:1200px) {
+  /*search bar block*/
+  .search_box{
+    font-size: 1.1rem;
+    width:90%;
+    padding:10px;
+    margin: 30px auto 30px;
+  }
+  .search_bar{
+    width:440px;
+    margin: 0px auto;
+    width :90vw;
+  }
+  .search_bar input{
+    display: block;
+    height:35px;
+    margin: 10px auto;
+  }
+  .search_bar [type=text]{
+    width: 75vw;
+  }
+  /*criteria block*/
+  .criteria{
+    width:90vw;
+    margin:0px auto;
+  }
+  .split1 , .split3{
+    display: inline;
+  }
+  .criteria select{
+    margin: 10px 0px;
+    width:30vw;
+    height: 50px;
+  }
+  .criteria label{
+    display: inline-block;
+    margin: 10px 0px;
+    width:100px;
+  }
+  /*control buttons block*/
+  .control_buttons{
+    width:80vw;
+    margin:0px auto;
+  }
+  .control_buttons button{
+    display: inline-block;
+    width:25vw;
+    height: 70px;
+  }
+  /*results block*/
+  .results{
+    box-sizing: content-box;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    width:85vw;
+    margin:20px auto ;
+    overflow: scroll;
+    max-height: 80vh;
+  }
+  /*####################3*/
+  .update_customer{
+    /*Border*/
+  }
+  .update_customer label{
+    display: inline-block;
+    width:60px;
+  }
+  .update_customer input ,.update_customer textarea{
+    height: 35px;
+    margin:10px;
+    width:30vw;
+  }
+  .update_customer textarea{
+    height:200px;
+    resize: none;
+    vertical-align: middle;
+  }
+  .uc_delete_button{
+    display: block;
+    margin: 10px auto;
+    height:70px;
+  }
+  /*##########################3*/
+  .update_project{
+    /*Border*/
+  }
+  .update_project label{
+    display: inline-block;
+    width:150px;
+  }
+  .update_project input , .update_project textarea , .update_project select{
+    margin :10px;
+  }
+  .update_project textarea {
+    height: 200px;
+    vertical-align: middle;
+    resize: none;
+    width:70%
+  }
+  .up_id_value , .up_price_value{
+    width: 15vw;
+  }
+  .up_deal_date_value , .up_end_date_value{
+    width: 20vw;
+  }
+  .update_project button{
+    width:150px;
+    height:70px;
+    display: block;
+    margin: 20px auto;
+  }
+  /*########################*/
+  .update_transaction{
+    /*border*/
+  }
+  .update_transaction button{
+    display: block;
+    margin: 20px auto;
+    width: 150px;
+    height: 70px;
+  }
+  .update_transaction label{
+    display: inline-block;
+    width:120px;
+  }
+  .update_transaction input{
+    margin: 10px;
+  }
+  .update_transaction textarea{
+    height: 200px;
+    width: 65vw;
+    vertical-align: middle;
+  }
+  .ut_id_value , .ut_paied_value , .ut_remaining_value{
+    width:15vw;
+  }
+  .ut_trans_date_value{
+    width: 20%;
+  }
+}
+
+/*Responsive > 992 */
+@media only screen and (min-width:1201px) {
+  /*search bar block*/
+  .search_box{
+    font-size: 1.1rem;
+    width:90%;
+    max-width: 1200px;
+    padding:10px;
+    margin: 30px auto 30px;
+  }
+  .search_bar{
+    width:440px;
+    margin: 0px auto;
+    width :90vw;
+    max-width: 800px;
+  }
+  .search_bar input{
+    display: block;
+    height:35px;
+    margin: 10px auto;
+    height:50px;
+  }
+  .search_bar [type=text]{
+    width: 75vw;
+    max-width: 650px;
+  }
+  /*criteria block*/
+  .criteria{
+    width:90vw;
+    max-width:1200px;
+    margin:0px auto;
+  }
+  .split1 , .split2,.split3{
+    display: inline;
+  }
+  .criteria select{
+    margin: 10px 10px;
+    width:11vw;
+    max-width: 150px;
+    height: 50px;
+  }
+  .criteria label{
+    display: inline-block;
+    margin: 10px 0px;
+    width:100px;
+  }
+  /*control buttons block*/
+  .control_buttons{
+    width:80vw;
+    max-width: 700px;
+    margin:0px auto;
+  }
+  .control_buttons button{
+    display: inline-block;
+    width:25vw;
+    max-width: 200px;
+    height: 70px;
+  }
+  /*results block*/
+  .results{
+    box-sizing: content-box;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    width:85vw;
+    max-width: 1200px;
+    margin:20px auto ;
+    overflow: scroll;
+    max-height: 80vh;
+  }
+  /*##############################*/
+  /*####################3*/
+  .update_customer{
+    /*Border*/
+  }
+  .update_customer label{
+    display: inline-block;
+    width:60px;
+  }
+  .update_customer input ,.update_customer textarea{
+    height: 35px;
+    margin:10px;
+    width:30vw;
+    max-width: 400px;
+  }
+  .update_customer textarea{
+    height:200px;
+    resize: none;
+    vertical-align: middle;
+  }
+  .uc_delete_button{
+    display: block;
+    margin: 10px auto;
+    height:70px;
+  }
+  /*##########################3*/
+  .update_project{
+    /*Border*/
+  }
+  .update_project label{
+    display: inline-block;
+    width:150px;
+  }
+  .update_project input , .update_project textarea , .update_project select{
+    margin :10px;
+    max-width: 300px;
+  }
+  .update_project textarea {
+    height: 200px;
+    vertical-align: middle;
+    resize: none;
+    width:70%;
+    max-width: 700px;
+  }
+  .up_id_value , .up_price_value{
+    width: 15vw;
+    max-width: 100px;
+  }
+  .up_deal_date_value , .up_end_date_value{
+    display: inline-block;
+    width: 20vw;
+    height: 35px;
+  }
+  .update_project button{
+    width:150px;
+    height:70px;
+    display: block;
+    margin: 20px auto;
+  }
+  /*########################*/
+  .update_transaction{
+    /*border*/
+  }
+  .update_transaction button{
+    display: block;
+    margin: 20px auto;
+    width: 150px;
+    height: 70px;
+  }
+  .update_transaction label{
+    display: inline-block;
+    width:120px;
+  }
+  .update_transaction input{
+    margin: 10px;
+    height: 35px;
+  }
+  .update_transaction textarea{
+    height: 200px;
+    width: 65vw;
+    max-width:900px;
+    resize: none;
+    vertical-align: middle;
+  }
+  .ut_id_value , .ut_paied_value , .ut_remaining_value{
+    width:15vw;
+    max-width: 200px;
+  }
+  .ut_trans_date_value{
+    width: 20%;
+  }
+}
+
+
+/*general in all screen views*/
+.back_button{
+  width:70px;
+  height:70px;
+  display: block;
+  margin: 0px auto;
+  background-color: transparent;
+  border: none;
+  background-image: url("../images/back_button.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0px auto;
+}
+.update_button,.mark_button,.delete_button{
+  background-color: transparent;
+  border: none;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width:50px;
+  height:50px;
+}
+.update_button{
+  background-image: url("../images/update_button.png");
+}
+.mark_button{
+  background-image : url("../images/mark_button.png");
+}
+.delete_button{
+  background-image: url("../images/delete_button.png");
+  opacity: 0.3
+}
+.update_submit_button{
+  display:block;
+  width: 150px;
+  height: 100px;
+  margin:70px auto;
+  border:none;
+  background-color: transparent;
+  background-image: url("../images/save_button.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+}
+
+
+/*for test*/
+table{
+  margin: 15px auto;
+}
+table , td{
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 20px;
+  min-width: 70px;
+}

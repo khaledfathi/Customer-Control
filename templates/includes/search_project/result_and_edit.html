@@ -1,0 +1,89 @@
+<form class="" action="search_project" method="post">
+  <!-- EDIT SECTION - Show project table-->
+  <div class="control_buttons">
+    <button class="update_button" type="button" name="button"></button>
+    <button class="mark_button" type="button" name="button"></button>
+    <button class="delete_button" type="button" name="button"></button>
+  </div>
+  <div class="results project_table">
+    <table class="res_table">
+      <tr>
+        <td>رقم المشروع</td>
+        <td>اسم العميل</td>
+        <td>تاريخ الاتفاق</td>
+        <td>المبلغ المتفق علية</td>
+        <td>تاريخ التسليم</td>
+        <td>وصف المشروع</td>
+        <td>حالة المشروع</td>
+        <td>تفاصيل اخرى</td>
+      </tr>
+    </table>
+  </div>
+  <!-- EDIT SECTION - Show project_update-->
+<!--##############################################################-->
+  <div class="update_project">
+    <label class="up_id_label" for="">رقم المشروع<span class="require">*<span></label>
+    <input class="up_id_value" type="text" name="" value="" disabled required>
+    <label class="up_deal_date_label" for="">تاريخ الاتفاق<span class="require">*<span></label>
+    <input class="up_deal_date_value" type="date" name="" value=""  required>
+    <div class="up_spit1"></div>
+    <label class="up_price_lable"for="">المبلغ المتفق علية<span class="require">*<span></label>
+    <input class="up_price_value" type="number" name="" value="" required>
+    <label class="up_end_date_label" for="">تاريخ التسليم</label>
+    <input class ="up_end_date_value" type="date" name="" value="" >
+    <div class="up_split2"></div>
+    <label class="up_description_label" for="">وصف المشروع</label>
+    <textarea class="up_description_value" name="name" ></textarea>
+    <div class="up_split3"></div>
+    <label class="up_status_label" for="">حالة المشروع</label>
+    <select class="up_status_value" name="">
+      <option value="" selected>قيد التنفيذ</option>
+      <option value="">انتهى ولم يتم التسليم</option>
+      <option value="">تم التسليم</option>
+      <option value="">تم الالغاء</option>
+    </select>
+    <div class="up_split4"></div>
+    <label class="up_details_label" for="">تفاصيل اخرى</label>
+    <textarea class="up_details_value" name="name" ></textarea>
+    <button class="up_delete_button" type="button" name="button">حذف المشروع</button>
+    <hr>
+  </div>
+<!--##############################################################-->
+  <!--TRANSACTION SECTION - Show transaction update-->
+  <div class="control_buttons">
+    <button class="update_button" type="button" name="button"></button>
+    <button class="mark_button" type="button" name="button"></button>
+    <button class="delete_button" type="button" name="button"></button>
+  </div>
+  <div class="results transaction_update">
+    <table class="res_table">
+      <tr>
+        <td>رقم المعاملة</td>
+        <td>تاريخ المعاملة</td>
+        <td>المبلغ المدفوع</td>
+        <td>ملاحظات</td>
+      </tr>
+    </table>
+  </div>
+  <!--TRANSACTION SECTION - Show transaction table-->
+  <div class="update_transaction">
+    <label class="ut_id_lable" for="">رقم العملية<span class="require">*<span></label>
+    <input class="ut_id_value" type="text" name="" value="" required disabled>
+    <label class="ut_trans_date_lable" for="">تاريخ المعاملة<span class="require">*<span></label>
+    <input class="ut_trans_date_value" type="date" name="" value="" required>
+    <div class="ut_split1"></div>
+    <label class="ut_paied_label" for="">المبلغ المدفوع<span class="require">*<span></label>
+    <input class="ut_paied_value" type="number" name="" value="" required>
+    <label class="ut_remaining_label" for="">المبلغ المتبقى</label>
+    <input class="ut_remaining_value" type="text" name="" value="" disabled>
+    <div class="ut_split2"></div>
+    <label class="ut_notes_label" for="">ملاحظات</label>
+    <textarea class="ut_notes_value"name="name" ></textarea>
+    <button class="ut_new" type="button" name="button">معاملة جديدة</button>
+    <button class="ut_delete_button" type="button" name="button">حذف المعاملة</button>
+    <hr>
+  </div>
+  <div class="button_box">
+    <button class="update_submit_button" type="submit" name="button"></button>
+  </div>
+</form>

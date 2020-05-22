@@ -1,0 +1,64 @@
+@media only screen and (max-width:768px) {
+  .app_container{
+    font-size: 1.5rem;
+    min-width: 350px;
+  }
+  .app_container button{
+    width: 200px !important;
+    height:100px !important;
+    font-size: 3rem !important;
+  }
+}
+
+@media  only screen and (min-width:769px) and (max-width:1352px) {  /*md-lg*/
+  .app_container{
+    font-size: 1.8rem;
+  }
+  .app_container button{
+    width: 200px !important;
+    height:100px !important;
+    font-size: 3rem !important;
+  }
+}
+.app_container{
+  text-align: center;
+  padding: 10px;
+  margin: 50px auto;
+  width: 80%;
+  max-width: 900px;
+  border: 2px solid #b37cff;
+  box-shadow: 0px 0px 5px #7cffee;
+  border-radius: 10px;
+}
+.app_container button{
+  width: 150px;
+  height:75px;
+  font-size: 30px;
+  margin: 20px;
+
+}
+
+.back_button , .help_button , .setting_button{
+  border: none;
+  background-color: transparent;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+}
+
+.back_button:hover , .help_button:hover , .setting_button:hover{
+  box-shadow: 0px 0px 10px #6d7dd9;
+}
+.back_button:active , .help_button:active , .setting_button:active{
+  box-shadow: 0px 0px 10px red;
+}
+.back_button{
+    background-image: url("/static/images/back_button.png");
+}
+.help_button{
+  background-image: url("/static/images/about/help_button.png");
+}
+.setting_button{
+  background-image: url("/static/images/about/setting_button.png");
+}

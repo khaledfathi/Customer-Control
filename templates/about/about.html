@@ -1,0 +1,23 @@
+{%extends 'layout.html'%}
+{%block page_title%}مودرن هاوس - عن البرنامج{%endblock%}
+{%block link%}
+  <link rel="stylesheet" href="static/about/about.css" type="text/css">
+{%endblock%}
+
+{%block in_container%}
+  <h3>تطبيق ويب لادارة قواعد بيانات العملاء والمشاريع</h3>
+  <p>قاعدة البيانات : SQLite3</p>
+  <p>اصدار البرنامج : 0.1.0</p>
+  <p>الرخصة : Open Source / GPL3</p>
+  <p>الكود : GitHub</p>
+  <p>المطور : khaledfathi@protonmail.com</p>
+
+  <a href="/"><button class="back_button" type="button" name="button"></button></a>
+  <a href="/help"><button class="help_button" type="button" name="button"></button></a>
+  <a href="/setting"><button class="setting_button" type="button" name="button"></button></a>
+{%endblock%}
+
+
+{%block script%}
+<script type="text/javascript" src="static/about/about.js"></script>
+{%endblock%}

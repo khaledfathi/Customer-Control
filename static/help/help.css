@@ -1,0 +1,13 @@
+
+.back_button{
+  display: block;
+  margin: 50px auto 10px;
+  width:100px;
+  height: 70px;
+  border: none;
+  background-color: transparent;
+  background-image: url("../images/back_button.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}

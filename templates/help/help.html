@@ -1,0 +1,67 @@
+{%extends 'layout.html'%}
+{%block link%}
+  <link rel="stylesheet" href="/static/help/help.css" type="text/css">
+{%endblock%}
+
+{%block in_container%}
+<div class="">
+  <ul>
+    <li>تعريف بالبرنامج</li>
+    <li>
+      الصفحة الرئيسية
+      <ul>
+        <li>الازرار الاساسية</li>
+        <li>التقارير</li>
+      </ul>
+    </li>
+    <li>
+      اضافة عميل جديد
+      <ul>
+        <li>اضافة جديدة</li>
+        <li>اضافة مشروع</li>
+        <li>اضافة معاملة مالية</li>
+        <li>شروط الادخال</li>
+      </ul>
+    </li>
+    <li>
+      صفحة بحث العملاء
+      <ul>
+        <li>الوضع الافتراضى</li>
+        <li>البحث المخصص</li>
+        <li>انماط البحث</li>
+        <li>الفرز</li>
+        <li>الترتيب</li>
+        <li>ازرار التحديث والحذف</li>
+        <li>اضافة مشروع</li>
+        <li>اضافة معاملة </li>
+        <li>تحديث وحذف المشاريع والمعاملات</li>
+      </ul>
+    </li>
+
+    <li>
+      البحث فى المشاريع
+      <ul>
+        <li>الوضع الافتراضى</li>
+        <li>التعديل والحذف</li>
+      </ul>
+    </li>
+    <li>
+      صفحة الاعدادات
+      <ul>
+        <li>كلمة مرور الدخول</li>
+        <li>النسخ والاسترجاع الداخلى</li>
+        <li>الاستيراد والتصدير</li>
+        <li>قائمة التاريخ</li>
+        <li>تفريغ قائمة التاريخ</li>
+        <li>تغيير عنوان رأس الصفحة</li>
+        <li>تغيير كلمة المرور</li>
+      </ul>
+    </li>
+  </ul>
+  <a href="/about"><button class="back_button" type="button" name="button"></button></a>
+</div>
+{%endblock%}
+
+{%block script%}
+  <script type="text/javascript" src="/static/help/help.js"></script>
+{%endblock%}

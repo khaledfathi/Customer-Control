@@ -1,0 +1,24 @@
+{%extends 'layout.html'%}
+{%block page_title%}مودرن هاوس - الاعدادات{%endblock%}
+{%block link%}
+  <link rel="stylesheet" href="static/setting/setting.css" type="text/css">
+{%endblock%}
+
+{%block in_container%}
+<form class="" action="setting" method="post">
+  <img src="static/images/setting/lock_icon.png" alt="">
+  <div class="password">
+    {%if error%}
+        <span class="error">كلمة مرور خاطئة - غير مصرح لك بالدخول</span>
+    {%endif%}
+    <label for="">كلمة المرور</label>
+    <input type="Password" name="pw" value="" required>
+    <input type="submit" name="" value="دخول">
+  </div>
+  <a href="/about"><button class="back_button" type="button" name="button"></button></a>
+</form>
+{%endblock%}
+
+{%block script%}
+  <script type="text/javascript" src="static/setting/setting.js"></script>
+{%endblock%}

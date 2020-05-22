@@ -1,0 +1,27 @@
+
+
+
+
+/*general*/
+/*app_container*/
+.app_container{
+  padding: 10px;
+  margin: 100px auto;
+  width: 90%;
+  max-width: 1500px;
+  border: 2px solid #b37cff;
+  box-shadow: 0px 0px 5px #7cffee;
+  border-radius: 10px;
+}
+.back_button{
+  display: block;
+  margin: 50px auto 10px;
+  width:100px;
+  height: 70px;
+  border: none;
+  background-color: transparent;
+  background-image: url("../images/back_button.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}

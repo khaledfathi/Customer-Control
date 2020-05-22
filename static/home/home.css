@@ -1,0 +1,118 @@
+/* Bootstrap standers
+    Extra small devices Phones (<768px) / .col-xs-
+    Small devices Tablets (≥768px) / .col-sm-
+    Medium devices Desktops (≥992px) / .col-md-
+    Large devices Desktops (≥1200px) / .col-lg-
+*/
+
+@media  only screen and (max-device-width:768px) ,  only screen and (max-width:768px) { /*xs*/
+  .app_container{
+    font-size:0.9rem;
+  }
+  .app_container button{
+    display: block;
+    width:220px !important;
+    height:100px;
+    margin: 10px auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-clip:border-box;
+    background-size:contain
+  }
+  .options{
+    width:300px !important;
+  }
+}
+@media  only screen and (min-device-width:769px) and (max-device-width:1350px),
+  only screen and (min-width:769px) and (max-width:1350px) {  /*md-lg*/
+  .app_container{
+    font-size: 1.8rem;
+  }
+  .split_buttons {
+    display: block !important;
+  }
+  .options{
+    width:650px !important;
+
+  }
+  .options button{
+    margin: 20px 50px !important;
+    width:200px !important;
+  }
+  .reports{
+    margin:50px auto ;
+  }
+  .reports fieldset{
+    display: block;
+    width :90%;
+    margin:0px auto;
+  }
+}
+@media only screen and (min-width:1351px){
+  .reports{
+    max-width: 1200px;
+    margin:50px auto;
+  }
+  .reports fieldset{
+    height:100px;
+    display: inline-block;
+    width:45%;
+    box-sizing: content-box;
+  }
+}
+/*app_container*/
+.app_container{
+  padding: 10px;
+  margin: 100px auto;
+  width: 90%;
+  max-width: 1800px;
+  border: 2px solid #b37cff;
+  box-shadow: 0px 0px 5px #7cffee;
+  border-radius: 10px;
+}
+
+/*top buttons*/
+.options{
+  width:1250px;
+  padding: 10px;
+  margin: 0px auto;
+}
+.app_container button{
+  width:300px;
+  height:150px;
+  margin: 10px auto;
+  border: none;
+  border-radius: 20px;
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-clip:border-box;
+  background-size:contain
+}
+.app_container button:hover{
+  box-shadow: 0px 0px 10px #6d7dd9;
+
+}
+.app_container button:active{
+  box-shadow: 0px 0px 20px red;
+
+}
+.new_customer{
+  background-image: url('../images/home/add_user_button.png');
+
+}
+.search_customer{
+  background-image: url('../images/home/search_user_button.png');
+
+}
+.search_project{
+  background-image: url('../images/home/search_project_button.png');
+
+}
+.about{
+  background-image: url('../images/home/about_button.png');
+
+}
+
+
+/*framework*/

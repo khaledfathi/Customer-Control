@@ -1,0 +1,18 @@
+/*general*/
+header{
+  /*background-color: #b37cff;*/
+  background: linear-gradient(to bottom ,#6d7dd9 30% , white 100%);
+  /*box-shadow: 0px 10px 30px #444;*/
+  height: 170px;
+}
+header h1{
+  margin: 0px;
+  text-align: center;
+  padding-top: 20px;
+  text-shadow: 0px 0px 10px white;
+}
+header span{
+  margin-top: 20px;
+  text-align: center;
+  display: block;
+}

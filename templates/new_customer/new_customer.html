@@ -1,0 +1,90 @@
+{%extends 'layout.html'%}
+{%block page_title%}مودرن هاوس - عميل جديد{%endblock%}
+{%block link%}
+  <link rel="stylesheet" href="static/new_customer/new_customer.css" type="text/css">
+{%endblock%}
+{%block in_container%}
+<div id="flash" class="flash_messages_container">
+  {%with messages = get_flashed_messages()%}
+    {%if messages%}
+      {%for msg in messages%}
+        <p class="flash_messages">{{msg}}</p>
+      {%endfor%}
+    {%endif%}
+  {%endwith%}
+
+</div>
+<form class=""  method="post">
+  <div class="add_customer">
+    <label class="ac_name_label" for="">الاسم<span class="require">*<span></label>
+    <input id="ac_name" class="ac_name_value" type="text" name="ac_name" value="" required>
+    <label class="ac_phone_label" for="">التليفون<span class="require">*<span></label>
+    <input id="ac_phone" class="ac_phone_value" type="number" name="ac_phone" value="" required>
+    <div class="split1"></div>
+    <label class="ac_address_label" for="">العنوان</label>
+    <input id="ac_address" class="ac_address_value" type="text" name="ac_address" value="" >
+    <div class="split2"></div>
+    <label class="ac_details_label" for="">تفاصيل</label>
+    <textarea id="ac_details" class="ac_details_value" name="ac_details" ></textarea>
+    <div class="split3"></div>
+    <input id="ac_new_project" class="ac_new_project_checkbox" type="checkbox" name="" value="">
+    <label class="ac_new_project_label" for="ac_new_project">اضافة مشروع</label>
+    <hr>
+  </div>
+
+  <div id="add_project" class="add_project" hidden>
+    <label class="ap_name_label" for="">اسم العميل<span class="require">*<span></label>
+    <input id="ap_name" class="ap_name_value" type="text" name="ap_name" value="" disabled required>
+    <label class="ap_deal_date_label" for="">تاريخ الاتفاق<span class="require">*<span></label>
+    <input id="ap_deal_date" class="ap_deal_date_value" type="date" name="ap_deal_date" value=""  >
+    <div class="split4"></div>
+    <label class="ap_price_lable"for="">المبلغ المتفق علية<span class="require">*<span></label>
+    <input id="ap_price" class="ap_price_value" type="number" name="ap_price" value="" >
+    <label class="ap_end_date_label" for="">تاريخ التسليم</label>
+    <input id="ap_end_date" class ="ap_end_date_value" type="date" name="ap_end_date" value="" >
+    <div class="split5"></div>
+    <label class="ap_description_label" for="">وصف المشروع</label>
+    <textarea id="ap_description" class="ap_description_value" name="ap_description" ></textarea>
+    <div class="split6"></div>
+    <label class="ap_status_label" for="">حالة المشروع</label>
+    <select id="ap_status" class="ap_status_value" name="ap_status">
+      <option value="1" selected>قيد التنفيذ</option>
+      <option value="2">انتهى ولم يتم التسليم</option>
+      <option value="3">تم التسليم</option>
+      <option value="4">تم الالغاء</option>
+    </select>
+    <div class="split7"></div>
+    <label class="ap_details_label" for="">تفاصيل اخرى</label>
+    <textarea id="ap_details" class="ap_details_value" name="ap_details" ></textarea>
+    <div class="split8"></div>
+    <input id="ap_new_transaction" class="ap_new_transaction_checkbox" type="checkbox" name="ap_new_transaction" value="">
+    <label class="ap_new_transaction_label" for="ap_new_transaction">اضافة معاملة مالية</label>
+    <hr>
+  </div>
+
+  <div id="add_transaction" class="add_transaction" hidden>
+    <label class="at_trans_date_lable" for="">تاريخ المعاملة<span class="require">*<span></label>
+    <input id="at_trans_date" class="at_trans_date_value" type="date" name="at_trans_date" value="" >
+    <div  class="split9"></div>
+    <label class="at_paied_label" for="">المبلغ المدفوع<span class="require">*<span></label>
+    <input id="at_paied" class="at_paied_value" type="number" name="at_paied" value="" >
+    <label class="at_remaining_label" for="">المبلغ المتبقى</label>
+    <input id="at_remaining" class="at_remaining_value" type="text" name="at_remaining" value="" disabled>
+    <div class="split9"></div>
+    <label class="at_notes_label" for="">ملاحظات</label>
+    <textarea id="at_notes" class="at_notes_value"name="at_notes" ></textarea>
+    <hr>
+  </div>
+  <div class="button_box">
+    <button id="save_button" class="save_button" type="submit" name="button"></button>
+    <a href="/"><button class="back_button" type="button" name="button"></button></a>
+  </div>
+  <input id="other_api" type="hidden" name="other_api" value="">
+</form>
+
+{%endblock%}
+
+
+{%block script%}
+  <script type="text/javascript" src="static/new_customer/new_customer.js"></script>
+{%endblock%}

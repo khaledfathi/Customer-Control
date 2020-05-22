@@ -1,0 +1,67 @@
+{%extends 'layout.html'%}
+{%block page_title%}مودرن هاوس - بحث المشاريع{%endblock%}
+{%block link%}
+<link rel="stylesheet" href="static/search_project/search_project.css" , type="text/css">
+{%endblock%}
+
+{%block in_container%}
+<div class="search_box">
+  <form class="search_project_form" action="search_project" method="post">
+    <div class="search_bar">
+      <input type="text" name="" value="">
+      <input type="submit" name="" value="بحث">
+    </div>
+    <div class="criteria">
+      <input type="checkbox" name="" value="">
+      <label for="">بحث مخصص</label><br>
+      <label for="">بحث بـ</label>
+      <select class="" name="">
+        <option value="">رقم المشروع</option>
+        <option value="">اسم العميل</option>
+        <option value="">وصف المشروع</option>
+        <option value="">المبلغ المتفق علية</option>
+        <option value="">تاريخ الاتفاق</option>
+        <option value="">تاريخ التسليم</option>
+        <option value="">حالة المشروع</option>
+        <option value="">تفاصيل اخرى</option>
+      </select>
+      <div class="split1"></div>
+      <label for="">نمط البحث</label>
+      <select class="" name="">
+        <option value="" selected>يحتوى على</option>
+        <option value="">يبدأ بـ</option>
+        <option value="">ينتهى بـ</option>
+        <option value="">تاريخ</option>
+        <option value="">فترة</option>
+      </select>
+      <div class="split2"></div>
+      <label for="">فرز</label>
+      <select class="" name="">
+        <option value="">رقم المشروع</option>
+        <option value="">اسم العميل</option>
+        <option value="">وصف المشروع</option>
+        <option value="">المبلغ المتفق علية</option>
+        <option value="">تاريخ الاتفاق</option>
+        <option value="">تاريخ التسليم</option>
+        <option value="">حالة المشروع</option>
+        <option value="">تفاصيل اخرى</option>
+      </select>
+      <div class="split3"></div>
+      <label for="">ترتيب</label>
+      <select class="" name="">
+        <option value="" selected>تصاعدى</option>
+        <option value="">تنازلى</option>
+      </select>
+      <p>تم العثور على 12 نتيجة</p>
+    </div>
+  </form>
+  {%if res%}
+    {%include 'includes/search_project/result_and_edit.html'%}
+  {%endif%}
+  <a href="/"><button class="back_button" type="button" name="button"></button></a>
+</div>
+{%endblock%}
+
+{%block script%}
+<script type="text/javascript" src="static/search_project/search_project.js"></script>
+{%endblock%}

@@ -1,0 +1,59 @@
+{%extends 'layout.html'%}
+{%block page_title%}مودرن هاوس - الرئيسية{%endblock%}
+{%block header_h1%}مودرن هاوس{%endblock%}
+{%block link%}
+<link rel="stylesheet" href="static/home/home.css" type="text/css">
+{%endblock%}
+{%block in_container%}
+<div class="options">
+  <a href="/new_customer"><button class="new_customer" type="button" name="button" title="اضافة عميل جديد"></button></a>
+  <a href="/search_customer"><button class="search_customer" type="button" name="button" title="بحث العملاء"></button></a>
+  <div class="split_buttons" style="display:inline"></div>
+  <a href="/search_project"><button class="search_project" type="button" name="button" title="بحث فى المشاريع"></button></a>
+  <a href="/about"><button class="about" type="button" name="button" title="عن البرنامج"></button></a>
+</div>
+<div class="reports">
+  <fieldset>
+    <legend>تقرير عام</legend>
+    <table>
+      <tr>
+        <td>عدد العملاء المسجلين</td>
+        <td>100</td>
+      </tr>
+      <tr>
+        <td>عدد المشاريع المسجلة</td>
+        <td>100</td>
+      </tr>
+      <tr>
+        <td>عدد المشاريع النشطة</td>
+        <td>100</td>
+      </tr>
+    </table>
+  </fieldset>
+  <fieldset>
+    <legend>تقرير النسخ الاحتياطى</legend>
+    <table>
+      <tr>
+        <td>توقيت اخر تصدير</td>
+        <td>25/10/2020 -- 13:22 </td>
+      </tr>
+      <tr>
+        <td>توقيت اخر استيراد</td>
+        <td>25/10/2020 -- 13:22 </td>
+      </tr>
+      <tr>
+        <td>توقيت اخر حفظ داخلى</td>
+        <td>25/10/2020 -- 13:22 </td>
+      </tr>
+      <tr>
+        <td>توقيت اخر استيراد داخلى</td>
+        <td>25/10/2020 -- 13:22 </td>
+      </tr>
+    </table>
+  </fieldset>
+</div>
+{%endblock%}
+
+{%block script%}
+<script type="text/javascript" src="static/home/home.js"></script>
+{%endblock%}

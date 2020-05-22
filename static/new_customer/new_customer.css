@@ -1,0 +1,280 @@
+/* Bootstrap standers
+    Extra small devices Phones (<768px) / .col-xs-
+    Small devices Tablets (≥768px) / .col-sm-
+    Medium devices Desktops (≥992px) / .col-md-
+    Large devices Desktops (≥1200px) / .col-lg-
+*/
+
+/*Responsive 0 ~ 992 */
+@media only screen and (max-device-width:992px) , screen and (max-width:992px){
+  /*general*/
+``  .add_customer , .add_project , .add_transaction{
+    margin:10px auto 0px;
+    font-size: 2rem;
+  }
+  /*add new customer block*/
+  .ac_name_label,.ac_name_value,.ac_phone_label,
+  .ac_phone_value,.ac_address_label,.ac_address_value,
+  .ac_details_label,.ac_details_value{
+      display: block;
+      width:80%;
+      max-width: 600px;
+      margin:10px auto;
+  }
+  .ac_name_value,.ac_phone_value,
+  .ac_address_value{
+    height: 35px;
+  }
+  .ac_details_value{
+    height:200px;
+    resize: none;
+    overflow: scroll;
+  }
+  .ac_new_project_checkbox{
+    vertical-align: middle;
+  }
+  .ac_new_project_label{
+    margin-top: 50px;
+    display: inline-block;
+  }
+
+  /*add new project block*/
+  .ap_name_label,.ap_name_value,.ap_deal_date_label,
+  .ap_deal_date_value,.ap_price_lable,.ap_price_value,
+  .ap_end_date_label,.ap_end_date_value,.ap_description_label,
+  .ap_description_value,.ap_status_label,.ap_status_value,
+  .ap_details_label,.ap_details_value{
+    display:block;
+    width:80%;
+    max-width: 600px;
+    margin:10px auto;
+  }
+  .ap_name_value,.ap_deal_date_value,.ap_price_value,
+  .ap_end_date_value,.ap_status_value{
+    height: 35px;
+  }
+  .ap_description_value,.ap_details_value{
+    height:200px;
+    resize: none;
+    overflow: scroll;
+  }
+  .ap_new_transaction_label{
+    display: inline-block;
+    margin-top: 50px;
+  }
+  .ap_new_transaction_checkbox{
+    vertical-align: middle;
+  }
+  /*Transaction block*/
+  .at_trans_date_lable,.at_trans_date_value,.at_paied_label,
+  .at_paied_value,.at_remaining_label,.at_remaining_value,
+  .at_notes_label,.at_notes_value{
+    display:block;
+    width:80%;
+    max-width: 600px;
+    margin:10px auto;
+  }
+  .at_trans_date_value,.at_paied_value,.at_remaining_value{
+    height: 35px;
+  }
+  .at_notes_value{
+    height:200px;
+    resize: none;
+    overflow: scroll;
+  }
+  /*action buttons*/
+  .button_box{
+    height:120px;
+    margin:0px auto;
+  }
+  .save_button {
+    margin-right: 10%;
+    float: right;
+  }
+  .back_button{
+    margin-left:10%;
+    float: left;
+  }
+  /*flash messsage */
+  .flash_messages_container{
+    width: 80%;
+    margin: 0px auto;
+    background: #7cffee;
+    border-radius: 20px;
+  }
+  .flash_messages{
+    display: inline-block;
+    color:#6d7dd9;
+    height:50px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 30px;
+    padding-top: 10px;
+  }
+}
+
+/*Responsive >= 993 */
+@media only screen and (min-width:993px){
+  /*ADD CUSTOMER BLOCK*/
+  form{
+    max-width: 1200px !important;
+  }
+  .add_customer{
+    width:90%;
+    margin: 0px auto;
+    padding:15px;
+  }
+  .ac_name_label,.ac_phone_label,.ac_address_label,.ac_details_label{
+    display: inline-block;
+    width: 7%;;
+    vertical-align: middle;
+  }
+  .ac_name_value,.ac_phone_value, .ac_address_value{
+    height: 35px;
+    margin: 10px 0px;
+    width:36%;
+  }
+  .ac_address_value{
+    width:82%;
+  }
+  .ac_details_value{
+    vertical-align:middle;
+    height: 150px;
+    width:84%;
+    resize: none;
+    overflow: scroll;
+  }
+  .ac_new_project_label{
+    display: inline-block;
+    margin: 20px 0px;
+  }
+  /*ADD NEW PROJECT BLOCK*/
+  .add_project{
+    padding: 15px;
+    width:90%;
+    margin:0px auto;
+  }
+  .ap_name_label,.ap_deal_date_label,.ap_price_lable,
+  .ap_end_date_label,.ap_description_label,.ap_status_label,
+  .ap_details_label{
+    display: inline-block;
+    width:130px;
+    margin: 0px 10px;
+  }
+
+  .ap_name_value,.ap_deal_date_value,.ap_price_value,
+  .ap_end_date_value,.ap_description_value,.ap_status_value
+  .ap_details_value{
+    margin:10px 0px;
+    height:35px;
+    width: 25%;
+  }
+  .ap_status_value{
+    width:30%;
+    height: 35px;
+  }
+  .ap_description_value,.ap_details_value{
+    vertical-align: middle;
+    height: 200px;
+    resize: none;
+    overflow: scroll;
+    width:75% ;
+    margin: 20px 0px;
+  }
+
+  .ap_new_transaction_label{
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+
+  /*ADD TRANSACTION BLOCK*/
+  .add_transaction{
+    width: 90%;
+    padding: 15px;
+    margin: 0px auto;
+  }
+  .at_trans_date_lable,.at_paied_label,.at_remaining_label,.at_notes_label{
+    display: inline-block;
+    width:110px;
+  }
+  .at_trans_date_value,.at_paied_value,.at_remaining_value{
+    width: 27%;
+    text-align:center;
+    margin: 10px;
+    height:20px;
+  }
+  .at_notes_value{
+    vertical-align: middle;
+    height: 200px;
+    resize: none;
+    width: 79%;
+    /*buttons box*/
+  }
+  /*flash messsage */
+  .flash_messages_container{
+    width: 80%;
+    margin: 0px auto;
+    background: #7cffee;
+    max-width: 1200px;
+    border-radius: 20px;
+  }
+  .flash_messages{
+    display: inline-block;
+    color:#6d7dd9;
+    height:50px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.3rem;
+    line-height: 30px;
+    padding-top: 10px;
+  }
+}
+.button_box{
+  margin: 10px auto;
+  width:90%;
+  max-width: 700px;
+  height: 100px;
+}
+.save_button{
+  float: right;
+}
+.back_button{
+  float:left;
+}
+
+/*General*/
+form{
+  border:2px solid #6d7dd9;
+  box-shadow: 0px 0px 10px #7cffee;
+  margin: 50px auto ;
+  border-radius: 25px ;
+  padding: 1px;
+  width: 80%;
+  max-width: 1550px;
+  min-width: 210px;
+}
+.save_button , .back_button{
+  background-color: transparent;
+  border: none;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width:60px;
+  height:75px;
+}
+.save_button {
+  background-image: url("../images/save_button.jpeg");
+}
+.back_button{
+  background-image: url("../images/back_button.png");
+
+}
+/*framework*/
+.require{
+  color:red;
+}
+
+/*####End Of File*/
+
+/*testing*/
