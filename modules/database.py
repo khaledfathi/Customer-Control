@@ -75,3 +75,9 @@ class db :
             if fetch :
                 return cur.fetchall()
             return
+
+    def query_all(self,statment):
+        with sqlite3.connect(self.file_name) as conn :
+            cur = conn.cursor()
+            cur.execute(statment)
+            return cur.fetchall()

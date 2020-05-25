@@ -43,7 +43,6 @@
     margin:0px auto;
   }
   .control_buttons button{
-    display: inline-block;
     width:25vw;
     height: 70px;
   }
@@ -176,7 +175,6 @@
     margin:0px auto;
   }
   .control_buttons button{
-    display: inline-block;
     width:25vw;
     height: 70px;
   }
@@ -198,15 +196,17 @@
     display: inline-block;
     width:60px;
   }
-  .update_customer input ,.update_customer textarea{
+  .update_customer input {
     height: 35px;
     margin:10px;
     width:30vw;
   }
   .update_customer textarea{
     height:200px;
+    width: 80%;
     resize: none;
     vertical-align: middle;
+    margin: 10px 0px;
   }
   .uc_delete_button{
     display: block;
@@ -325,7 +325,6 @@
     margin:0px auto;
   }
   .control_buttons button{
-    display: inline-block;
     width:25vw;
     max-width: 200px;
     height: 70px;
@@ -342,15 +341,14 @@
     max-height: 80vh;
   }
   /*##############################*/
-  /*####################3*/
   .update_customer{
     /*Border*/
   }
   .update_customer label{
     display: inline-block;
-    width:60px;
+    width:100px;
   }
-  .update_customer input ,.update_customer textarea{
+  .update_customer input{
     height: 35px;
     margin:10px;
     width:30vw;
@@ -358,7 +356,9 @@
   }
   .update_customer textarea{
     height:200px;
+    width :80%;
     resize: none;
+    max-width:1000px;
     vertical-align: middle;
   }
   .uc_delete_button{
@@ -432,6 +432,7 @@
   .ut_trans_date_value{
     width: 20%;
   }
+
 }
 
 
@@ -466,7 +467,6 @@
 }
 .delete_button{
   background-image: url("../images/delete_button.png");
-  opacity: 0.3
 }
 .update_submit_button{
   display:block;
@@ -482,8 +482,10 @@
 
 }
 
-
-/*for test*/
+.update_button{
+  box-shadow: 0px 0px 10px red;
+  }
+/*other*/
 table{
   margin: 15px auto;
 }
@@ -492,4 +494,14 @@ table , td{
   border-collapse: collapse;
   padding: 20px;
   min-width: 70px;
+}
+thead:hover{
+  background: green !important;
+}
+tr:hover{
+  background: #7cffee;
+  cursor: pointer;
+}
+.table_head , .table_head:hover{
+  background: #b37cff;
 }

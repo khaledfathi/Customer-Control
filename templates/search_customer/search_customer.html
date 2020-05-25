@@ -8,48 +8,193 @@
 <div class="search_box">
   <form class="search_customer_form" action="search_customer" method="post">
     <div class="search_bar">
-      <input type="text" name="" value="">
+      <input id="query" type="text" name="query" value="">
       <input type="submit" name="" value="بحث">
     </div>
     <div class="criteria">
-      <input type="checkbox" name="" value="">
-      <label for="">بحث مخصص</label><br>
       <label for="">بحث بـ</label>
-      <select class="" name="">
-        <option value="">رقم العميل</option>
-        <option value="" selected>اسم العميل</option>
-        <option value="">تليفون العميل</option>
-        <option value="">عنوان العميل</option>
-        <option value="">تفاصيل اخرى</option>
+      <select id="search_by" class="" name="search_by">
+        <option value="1">رقم العميل</option>
+        <option value="2" selected>اسم العميل</option>
+        <option value="3">تليفون العميل</option>
+        <option value="4">عنوان العميل</option>
+        <option value="5">تفاصيل اخرى</option>
       </select>
       <div class="split1"></div>
       <label for="">نمط البحث</label>
-      <select class="" name="">
-        <option value="" selected>يحتوى على</option>
-        <option value="">يبدأ بـ</option>
-        <option value="">ينتهى بـ</option>
+      <select id="pattern" class="" name="pattern">
+        <option value="1" selected>يحتوى على</option>
+        <option value="2">يبدأ بـ</option>
+        <option value="3">ينتهى بـ</option>
       </select>
       <div class="split2"></div>
       <label for="">فرز</label>
-      <select class="" name="">
-        <option value="">رقم العميل</option>
-        <option value="" selected>اسم العميل</option>
-        <option value="">تليفون العميل</option>
-        <option value="">عنوان العميل</option>
-        <option value="">تفاصيل اخرى</option>
+      <select id="sort" class="" name="sort">
+        <option value="1">رقم العميل</option>
+        <option value="2" selected>اسم العميل</option>
+        <option value="3">تليفون العميل</option>
+        <option value="4">عنوان العميل</option>
+        <option value="5">تفاصيل اخرى</option>
       </select>
       <div class="split3"></div>
       <label for="">ترتيب</label>
-      <select class="" name="">
-        <option value="" selected>تصاعدى</option>
-        <option value="">تنازلى</option>
+      <select id="order" class="order" name="order">
+        <option value="asc" selected>تصاعدى</option>
+        <option value="desc">تنازلى</option>
       </select>
-      <p>تم العثور على 12 نتيجة</p>
+      <div class="results_counter">
+        {%if count%}
+          <p>تم العثور على {{count}} نتيجة</p>
+          {%else%}
+          <p>لم يتم العثور على نتائج</p>
+        {%endif%}
+      </div>
     </div>
   </form>
-  {%if res%}
-    {%include 'includes/search_customer/result_and_edit.html'%}
-  {%endif%}
+  <!--results-->
+  <form class="" action="search_project" method="post">
+    <!-- EDIT SECTION - Show project table-->
+    <div class="control_buttons">
+      <button id="c_update_button" class="update_button" type="button" name="button"></button>
+      <button id="c_mark_button" class="mark_button" type="button" name="button"></button>
+      <button id="c_delete_button" class="delete_button" type="button" name="button" hidden></button>
+    </div>
+    <div class="results project_table">
+      <table id="c_res_table" class="res_table">
+        <tr  class="table_head"  onclick="null">
+          <td>رقم العميل</td>
+          <td>اسم العميل</td>
+          <td>التليفون</td>
+          <td>العنوان</td>
+          <td>تفاصيل</td>
+        </tr>
+        {%if res%}
+          {%for row in res%}
+            <tr>
+              {%for cell in row %}
+              <td>{{cell}}</td>
+              {%endfor%}
+            </tr>
+          {%endfor%}
+        {%endif%}
+
+      </table>
+    </div>
+    <!-- EDIT SECTION - Show project_update-->
+    <div class="update_customer" hidden>
+      <label class="uc_id_label" for="">رقم العميل<span class="require">*<span></label>
+      <input class="uc_id_value" type="text" name="" value="" disabled required>
+      <label class="uc_name_label" for="">اسم العميل</label>
+      <input class="uc_name_value" type="text" name="" value="" required>
+      <div class="uc_split1"></div>
+      <label class="uc_phone_label" for="">التليفون<span class="require">*<span></label>
+      <input class="uc_phone_value" type="number" name="" value=""  required>
+      <label class="uc_address_label"for="">العنوان<span class="require">*<span></label>
+      <input class="uc_address_value" type="text" name="" value="">
+      <div class="uc_split2"></div>
+      <label class="uc_details_label" for="">تفاصيل</label>
+      <textarea class="uc_details_value" name=""></textarea>
+    </div>
+    <hr>
+  <!--##############################################################-->
+  <!--############# PROJECT SECTION ###################-->
+  <div class="project_section" hidden>
+    <div class="control_buttons">
+      <button class="update_button" type="button" name="button"></button>
+      <button class="mark_button" type="button" name="button"></button>
+      <button class="delete_button" type="button" name="button"></button>
+    </div>
+    <div class="results project_table">
+      <table class="res_table">
+        <tr class="table_head">
+          <td>رقم المشروع</td>
+          <td>اسم العميل</td>
+          <td>تاريخ الاتفاق</td>
+          <td>المبلغ المتفق علية</td>
+          <td>تاريخ التسليم</td>
+          <td>وصف المشروع</td>
+          <td>حالة المشروع</td>
+          <td>تفاصيل اخرى</td>
+        </tr>
+      </table>
+    </div>
+    <!-- EDIT SECTION - Show project_update-->
+    <div class="update_project" hidden>
+      <label class="up_id_label" for="">رقم المشروع<span class="require">*<span></label>
+      <input class="up_id_value" type="text" name="" value="" disabled required>
+      <label class="up_deal_date_label" for="">تاريخ الاتفاق<span class="require">*<span></label>
+      <input class="up_deal_date_value" type="date" name="" value=""  required>
+      <div class="up_spit1"></div>
+      <label class="up_price_lable"for="">المبلغ المتفق علية<span class="require">*<span></label>
+      <input class="up_price_value" type="number" name="" value="" required>
+      <label class="up_end_date_label" for="">تاريخ التسليم</label>
+      <input class ="up_end_date_value" type="date" name="" value="" >
+      <div class="up_split2"></div>
+      <label class="up_description_label" for="">وصف المشروع</label>
+      <textarea class="up_description_value" name="name" ></textarea>
+      <div class="up_split3"></div>
+      <label class="up_status_label" for="">حالة المشروع</label>
+      <select class="up_status_value" name="">
+        <option value="" selected>قيد التنفيذ</option>
+        <option value="">انتهى ولم يتم التسليم</option>
+        <option value="">تم التسليم</option>
+        <option value="">تم الالغاء</option>
+      </select>
+      <div class="up_split4"></div>
+      <label class="up_details_label" for="">تفاصيل اخرى</label>
+      <textarea class="up_details_value" name="name" ></textarea>
+      <button class="up_delete_button" type="button" name="button">حذف المشروع</button>
+    </div>
+      <hr>
+  </div>
+  <!--############# END PROJECT SECTION ###################-->
+  <!--##############################################################-->
+
+  <!--##############################################################-->
+  <!--############# TRANSACTION SECTION ###################-->
+    <!--TRANSACTION SECTION - Show transaction update-->
+    <div class="transaction_section" hidden>
+      <div class="control_buttons" >
+        <button class="update_button" type="button" name="button"></button>
+        <button class="mark_button" type="button" name="button"></button>
+        <button class="delete_button" type="button" name="button"></button>
+      </div>
+      <div class="results transaction_update">
+        <table class="res_table">
+          <tr class="table_head">
+            <td>رقم المعاملة</td>
+            <td>تاريخ المعاملة</td>
+            <td>المبلغ المدفوع</td>
+            <td>ملاحظات</td>
+          </tr>
+        </table>
+      </div>
+      <!--TRANSACTION SECTION - Show transaction table-->
+      <div class="update_transaction" hidden>
+        <label class="ut_id_lable" for="">رقم العملية<span class="require">*<span></label>
+        <input class="ut_id_value" type="text" name="" value="" required disabled>
+        <label class="ut_trans_date_lable" for="">تاريخ المعاملة<span class="require">*<span></label>
+        <input class="ut_trans_date_value" type="date" name="" value="" required>
+        <div class="ut_split1"></div>
+        <label class="ut_paied_label" for="">المبلغ المدفوع<span class="require">*<span></label>
+        <input class="ut_paied_value" type="number" name="" value="" required>
+        <label class="ut_remaining_label" for="">المبلغ المتبقى</label>
+        <input class="ut_remaining_value" type="text" name="" value="" disabled>
+        <div class="ut_split2"></div>
+        <label class="ut_notes_label" for="">ملاحظات</label>
+        <textarea class="ut_notes_value"name="name" ></textarea>
+        <button class="ut_new" type="button" name="button">معاملة جديدة</button>
+        <button class="ut_delete_button" type="button" name="button">حذف المعاملة</button>
+      </div>
+      <hr>
+    </div>
+    <!--############# END TRANSACTION SECTION ###################-->
+    <!--##############################################################-->
+    <div class="button_box" hidden>
+      <button class="update_submit_button" type="submit" name="button"></button>
+    </div>
+    <input id="other_api" type="hidden" name="other_api" value="">
+  </form>
   <a href="/"><button class="back_button" type="button" name="button"></button></a>
 </div>
 
