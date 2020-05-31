@@ -18,7 +18,7 @@
     height:35px;
     margin: 10px auto;
   }
-  .search_bar [type=text]{
+  .search_bar [type=text] , .search_bar [type=number]{
     width: 75vw
   }
   /*criteria block*/
@@ -148,7 +148,7 @@
     height:35px;
     margin: 10px auto;
   }
-  .search_bar [type=text]{
+  .search_bar [type=text] , .search_bar [type=number]{
     width: 75vw;
   }
   /*criteria block*/
@@ -294,7 +294,7 @@
     margin: 10px auto;
     height:50px;
   }
-  .search_bar [type=text]{
+  .search_bar [type=text] , .search_bar [type=number]{
     width: 75vw;
     max-width: 650px;
   }
@@ -370,6 +370,12 @@
   .update_project{
     /*Border*/
   }
+  .new_project_button{
+    display: block;
+    margin: 20px auto;
+    width:150px;
+    height:70px;
+  }
   .update_project label{
     display: inline-block;
     width:150px;
@@ -404,7 +410,7 @@
   .update_transaction{
     /*border*/
   }
-  .update_transaction button{
+  .ut_new_transaction_button {
     display: block;
     margin: 20px auto;
     width: 150px;
@@ -433,6 +439,7 @@
     width: 20%;
   }
 
+
 }
 
 
@@ -451,6 +458,7 @@
   margin: 0px auto;
 }
 .update_button,.mark_button,.delete_button{
+  border-radius: 15px;
   background-color: transparent;
   border: none;
   background-position: center;
@@ -499,7 +507,7 @@ thead:hover{
   background: green !important;
 }
 tr:hover{
-  background: #7cffee;
+  background: #7cffee ;
   cursor: pointer;
 }
 .table_head , .table_head:hover{

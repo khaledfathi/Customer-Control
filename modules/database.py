@@ -46,10 +46,10 @@ class db :
             CREATE TABLE IF NOT EXISTS projects (
             id INTEGER PRIMARY KEY,
             customer_id INTEGER NOT NULL,
-            description TEXT,
-            paied INTEGER,
             deal_date DATE,
+            paied INTEGER,
             deal_end DATE,
+            description TEXT,
             status VARCHAR(20),
             details TEXT,
             FOREIGN KEY (customer_id) REFERENCES customers(id)
@@ -67,11 +67,15 @@ class db :
             """)
             conn.commit()
 
-    def query_statment (self,statment,data,fetch=False):
+
+    def query_statment (self,statment,data=False,fetch=False):
         'do sql statment [statment=str , data=function , fetch=bool]'
         with sqlite3.connect(self.file_name) as conn :
             cur = conn.cursor()
-            cur.execute(statment,data)
+            if data:
+                cur.execute(statment,data)
+            else :
+                cur.execute(statment)
             if fetch :
                 return cur.fetchall()
             return

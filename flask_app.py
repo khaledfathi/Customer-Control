@@ -6,7 +6,8 @@
 #code : python 3.8 / flask
 #github repository : !!
 
-#end time = ?? , avg/day = ?? min/max = ?
+#days = ? / work days
+#end time = ?? , avg/day = 4 min/max = 2/10
 
 from flask import Flask
 import os
